@@ -160,6 +160,9 @@ CORS_ALLOWED_ORIGINS = [
     "http://172.16.7.4:3000"
 ]
 
+# CSRF_TRUSTED_ORIGINS MUST include the 'https://'
+CSRF_TRUSTED_ORIGINS = os.getenv("DJANGO_CSRF_TRUSTED_ORIGINS", "http://localhost,http://127.0.0.1").split(",")
+
 
 # API Keys
 # core/settings.py
